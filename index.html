@@ -12,6 +12,32 @@
     <!-- timer -->
     <div class="timer">Remaining Time: <span id="rTime">0</span></div>
 
-    <div 
+    <div class="container">
+        <div id="startP" class="startC">
+            <h1>JavaScript Quiz</h1>
+            <p>Quiz Rules: Try to answer the following code-realted questions within the time limit. Incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="startB">Start</button>
+        </div>
+        <div id="crntQ" class="hidden">
+            <h2 id="qstn"></h2>
+            <div id="answerC" class="answerC">
+
+            </div>
+        </div>
+
+        <div id="ep" class="hidden">
+            <h2>Quiz completed!</h2>
+            <p>Final Score:<span id="fScore"></span></p>
+            <p>
+                Enter Your Initials:
+                <input type="text" id="initials" />
+                <button id="submitId">Submit</button>
+            </p>
+        </div>
+        <div id="rw" class="rw hidden">
+
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
 </body>
 </html>

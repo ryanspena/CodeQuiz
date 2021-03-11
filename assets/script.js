@@ -1,31 +1,64 @@
+let questions = [
+    {
+        title: "Commonly used data types do NOT Include:" , 
+        choices: ["strings" , "booleans" , "alerts" , "numbers"] ,
+        answer: "b1"
+    } ,
+
+    {
+        title: "Conditions in an if / else statement is enclosed with ______" , 
+        choices: ["quotes" , "curly brackets" , "parenthesis" , "square brackets"] ,
+        answer: "c2"
+    } ,
+
+    {
+        title: "Arrays in Javascript can be used to store" , 
+        choices: ["numbers and strings" , "other arrays" , "booleans" , "all of the above"] ,
+        answer: "a3"
+    } ,
+
+    {
+        title: "String values must be enclosed within ______ when being assigned to variables." , 
+        choices: ["commas" , "curly brackets" , "quotes" , "parenthesis"] ,
+        answer: "b1"
+    } , 
+
+    {
+        title: "A very useful tool used during development and debugging for printing content to the debugger is:" , 
+        choices: ["JavaScript" , "terminal/bash" , "for loops" , "console.log"] ,
+        answer: "b1"
+    }
+]
+
 var time = questions.length * 10;
 var currentQuestionIndex = 0;
 var timer;
 
-var questionsEl = document.getElementById("questions");
-var timerEl = document.getElementById("time");
-var choicesEl = document.getElementById("choices");
-var submitBtn = document.getElementById("submit");
-var startBtn = document.getElementById("start");
+var questionsEl = document.getElementById("crntQ");
+var timerEl = document.getElementById("rTime");
+var choicesEl = document.getElementById("answerC");
+var submitBtn = document.getElementById("submitId");
+var startBtn = document.getElementById("startB");
 var initialsEl = document.getElementById("initials");
-var feedbackEl = document.getElementById("feedback");
+var feedbackEl = document.getElementById("rw");
 
 function startQuiz() {
-var startScreen = document.getElementById("start-screen");
-startScreen.setAttribute("class", "hide");
+    console.log("this function is triggered");
+var startScreen = document.getElementById("startP");
+startScreen.setAttribute("class", "hidden");
 
 questionsEl.removeAttribute('class');
 
 timer = setInterval(clockTick, 1000)
 
-timerEd.textContent = time;
+timerEl.textContent = time;
 
 getQuestion();
 }
 
 function getQuestion() {
-var currentQuestion = questions[currentQuestionsIndex];
-var titleEl = document.getElementById("question-title");
+var currentQuestion = questions[currentQuestionIndex];
+var titleEl = document.getElementById("qstn");
 titleEl.textContent = currentQuestion.title;
 choicesEl.textContent = "";
 currentQuestion.choices.forEach(function(choice, i) {
@@ -55,6 +88,13 @@ quizEnd();
 }
 }
 
+function saveHighscore() {
+
+}
+
+function choiceClick() {
+
+}
 
 startBtn.onclick = startQuiz;
 submitBtn.onclick = saveHighscore;
