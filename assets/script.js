@@ -1,4 +1,4 @@
-let questions = [
+var questions = [
     {
         title: "Commonly used data types do NOT Include:" , 
         choices: ["strings" , "booleans" , "alerts" , "numbers"] ,
@@ -39,11 +39,11 @@ var timerEl = document.getElementById("rTime");
 var choicesEl = document.getElementById("answerC");
 var submitBtn = document.getElementById("submitId");
 var startBtn = document.getElementById("startB");
-var initialsEl = document.getElementById("initials");
-var feedbackEl = document.getElementById("rw");
+// var initialsEl = document.getElementById("initials");
+// var feedbackEl = document.getElementById("rw");
 
 function startQuiz() {
-    console.log("this function is triggered");
+console.log("this function is triggered");
 var startScreen = document.getElementById("startP");
 startScreen.setAttribute("class", "hidden");
 
@@ -63,7 +63,7 @@ titleEl.textContent = currentQuestion.title;
 choicesEl.textContent = "";
 currentQuestion.choices.forEach(function(choice, i) {
 var c = document.createElement("button");
-//c.setAttribute('class', 'choice')
+// c.setAttribute('class', 'choice')
 c.setAttribute('value', choice);
 c.textContent = choice;
 c.onclick = choiceClick;
@@ -71,14 +71,14 @@ choicesEl.append(c);
 });
 }
 
-function quizEnd() {
-clearInterval(timer);
-var endEl = document.getElementById("end-screen")
-endEl.removeAttribute("class")
+// function quizEnd() {
+// clearInterval(timer);
+// var endEl = document.getElementById("end-screen")
+// endEl.removeAttribute("class")
 
-var finalScoreEl = document.getElementById("final-score");
-finalScoreEl.textContent = time;
-}
+// var finalScoreEl = document.getElementById("final-score");
+// finalScoreEl.textContent = time;
+// }
 
 function clockTick() {
 time--;
@@ -94,6 +94,10 @@ function saveHighscore() {
 
 function choiceClick() {
 
+}
+
+function showResults() {
+    
 }
 
 startBtn.onclick = startQuiz;
