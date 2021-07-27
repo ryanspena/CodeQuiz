@@ -30,7 +30,7 @@ var questions = [
     }
 ]
 
-var time = questions.length * 10;
+var time = questions.length * 15;
 var currentQuestionIndex = 0;
 var timer;
 
